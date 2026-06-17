@@ -22,6 +22,6 @@ while True:
     if turn == 0:
         print(f"Perdu! Le nombre était {num}.")#affiche un message de fin de jeu si le joueur n'a plus de coups restants et révèle le nombre à deviner 
         break
-game_over = input("Voulez-vous jouer à nouveau? (oui/non): ")#demande au joueur s'il veut rejouer
-if game_over.lower() == "oui":
+rejouer = input("Voulez-vous jouer à nouveau? (oui/non): ")#demande au joueur s'il veut rejouer
+if rejouer.lower() == "oui":
     exec(open("index.py").read())#relance le jeu en exécutant à nouveau le fichier index.py
