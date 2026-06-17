@@ -12,7 +12,7 @@ while True:
         print("Veuillez entrer un nombre entre 1 et 100.")#affiche un message pour indiquer que le nombre deviné n'est pas dans la plage valide
         continue
     if guess == num:
-        print(f"Très bien! Vous avez deviné le nombre {num} en {turn} coups!")#affiche un message pour indiquer que le joueur a deviné le nombre
+        print(f"Très bien! Vous avez deviné le nombre {num} en { turn} coups!")#affiche un message pour indiquer que le joueur a deviné le nombre
         break
     elif guess < num:
         print("trop petit! reessayez.")#affiche un message pour indiquer que le nombre deviné est trop bas
@@ -20,5 +20,8 @@ while True:
         print("trop grand! reessayez.")#affiche un message pour indiquer que le nombre deviné est trop haut
     turn -= 1
     if turn == 0:
-        print(f"Game over! The number was {num}.")#affiche un message de fin de jeu si le joueur n'a plus de coups restants et révèle le nombre à deviner 
+        print(f"Perdu! Le nombre était {num}.")#affiche un message de fin de jeu si le joueur n'a plus de coups restants et révèle le nombre à deviner 
         break
+game_over = input("Voulez-vous jouer à nouveau? (oui/non): ")#demande au joueur s'il veut rejouer
+if game_over.lower() == "oui":
+    exec(open("index.py").read())#relance le jeu en exécutant à nouveau le fichier index.py
